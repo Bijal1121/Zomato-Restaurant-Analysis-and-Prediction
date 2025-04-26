@@ -11,7 +11,7 @@ A machine learning project to predict restaurant ratings based on key features s
   - Decision Tree Regressor
   - Random Forest Regressor
   - Support Vector Machines (SVM)
-- Achieved **90% prediction accuracy** for restaurant ratings.
+- Achieved **92% prediction accuracy** for restaurant ratings.
 - Created insightful visualizations about Mumbai's restaurant landscape.
 
 ---
