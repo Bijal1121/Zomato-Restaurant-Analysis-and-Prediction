@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Zomato Restaurant Rating Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  
+</head>
+
+<body>
+
+<!--<img src=
+"https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/news14109.jpg"
+         alt="zomato image", width="400", height="150", style="float:left">
+
+<img src=
+https://totaldatascience.com/wp-content/uploads/2019/10/TOTAL-1.png"
+         alt="zomato image", width="200", height="70", style="float:right">-->
+
+<style>
+body {
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)),url("https://i.pinimg.com/originals/25/27/bd/2527bd3e3997e00a69a0dbc7677e4bc7.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+</style>
+
+
+
+ <div class="login">
+	<h1>Predict Restaurant Ratings</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Outlet" placeholder="Outlet" required="required" />
+        <input type="text" name="Cost" placeholder="Cost" required="required" />
+		<input type="text" name="Delivery Time" placeholder="Delivery Time" required="required" />
+        <input type="text" name="Home Delivery" placeholder="Home Delivery" required="required" />
+        <input type="text" name="Delivery Cost" placeholder="Delivery Cost" required="required" />
+        <input type="text" name="Votes" placeholder="Votes" required="required" />
+        <input type="text" name="Cuisine Count" placeholder="Cuisine Count" required="required" />
+        <input type="text" name="Feature Count" placeholder="Feature Count" required="required" />
+        <input type="text" name="Restaurant Type" placeholder="Restaurant Type" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
