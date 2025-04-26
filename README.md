@@ -1,4 +1,4 @@
-# 🍽️ Zomato Rating Prediction
+# 🍽️ Restaurant Rating Prediction
 
 A machine learning project to predict restaurant ratings based on key features such as delivery time, cost for two, outlet count, and cuisine variety, using real-world Zomato data.
 
